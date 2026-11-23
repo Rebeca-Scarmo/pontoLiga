@@ -18,5 +18,5 @@ Observação: o equipamento é simulado por `curl` (ver limitações no README).
 
 ## Contingência (não substitui o MVP)
 
-- Gravar uma tela de 1–2 min seguindo este roteiro e salvar em `demo/demonstracao.mp4` (⚠️ gravar e anexar; não foi gerada automaticamente).
+- Gravar uma tela de 1–2 min seguindo este roteiro e salvar em `demo/demonstracao.mp4`.
 - Levar o PDF de uma ata já exportada e o `docs/pitch.pdf`.
