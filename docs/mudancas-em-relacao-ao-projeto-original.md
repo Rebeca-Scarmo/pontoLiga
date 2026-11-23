@@ -1,7 +1,7 @@
 # O que mudou em relação ao documento "PontoLiga" (Processos de Negócios)
 
 O documento original (`pontoLiga6.pdf`, disciplina Processos de Negócios) é **material preexistente**, usado só como referência conceitual.
-O software deste repositório foi simplificado conforme o prompt de desenvolvimento. Onde divergem, vale o software.
+O software deste repositório foi simplificado.
 
 | Tema | Documento original | Este MVP |
 |---|---|---|
