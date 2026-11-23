@@ -1,0 +1,260 @@
+/* PontoLiga - identidade visual Calabotics */
+
+:root {
+  --vinho: #6A040F;
+  --vermelho-escuro: #9D0208;
+  --vermelho: #D00000;
+  --laranja: #E85D04;
+  --ambar: #FAA307;
+  --amarelo: #FFBA08;
+  --fundo-escuro: #03071E;
+  --branco: #FFFFFF;
+
+  --texto: #1b1d2a;
+  --texto-suave: #5b5f70;
+  --borda: #d9dbe3;
+  --fundo-pagina: #f4f5f8;
+}
+
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fundo-pagina);
+}
+
+h1, h2 {
+  font-family: "Cairo", "Rubik", Arial, sans-serif;
+  color: var(--fundo-escuro);
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+h1 { font-size: 1.7rem; }
+h2 { font-size: 1.3rem; }
+
+a { color: var(--vermelho-escuro); }
+a:hover { color: var(--vinho); }
+
+:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 2px;
+}
+
+/* ---------- Cabeçalho ---------- */
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding: 0 24px;
+  min-height: 60px;
+  background: var(--fundo-escuro);
+  color: var(--branco);
+  border-bottom: 3px solid var(--vermelho-escuro);
+}
+
+.topo-marca { display: flex; flex-direction: column; line-height: 1.15; padding: 8px 0; }
+.marca-nome { font-family: "Cairo", "Rubik", Arial, sans-serif; font-weight: 700; font-size: 1.4rem; }
+.marca-sub { font-family: "Khula", "Rubik", Arial, sans-serif; font-size: 0.8rem; color: #b9bccd; }
+
+.menu { display: flex; gap: 4px; align-self: stretch; }
+.menu a {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  color: #d8dae6;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+}
+.menu a:hover { color: var(--branco); }
+.menu a.ativo { color: var(--branco); border-bottom-color: var(--ambar); }
+
+.topo-usuario {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Khula", "Rubik", Arial, sans-serif;
+}
+
+/* ---------- Conteúdo ---------- */
+.conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+.ata-titulo-linha {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Botões ---------- */
+.btn {
+  font-family: "Rubik", Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 9px 16px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-primario { background: var(--vermelho-escuro); color: var(--branco); }
+.btn-primario:hover { background: var(--vinho); }
+.btn-primario:disabled { opacity: 0.6; cursor: default; }
+.btn-claro { background: var(--branco); color: var(--texto); border-color: var(--borda); }
+.btn-claro:hover { background: #eceef3; }
+.btn-sobre-escuro { background: transparent; color: var(--branco); border-color: #5a5f7a; }
+.btn-sobre-escuro:hover { border-color: var(--branco); }
+.btn-largo { width: 100%; }
+.btn-pequeno { padding: 4px 10px; font-size: 0.85rem; }
+
+/* ---------- Tabelas ---------- */
+.tabela-rolagem { overflow-x: auto; background: var(--branco); border: 1px solid var(--borda); }
+table { width: 100%; border-collapse: collapse; }
+th {
+  font-family: "Khula", "Rubik", Arial, sans-serif;
+  font-weight: 600;
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--fundo-escuro);
+  color: var(--branco);
+  white-space: nowrap;
+}
+td { padding: 10px 14px; border-top: 1px solid var(--borda); vertical-align: top; }
+tbody tr:hover { background: #fafafd; }
+td.codigo { font-family: Consolas, "Courier New", monospace; }
+
+.selo-pendente {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 3px;
+  background: var(--amarelo);
+  color: var(--fundo-escuro);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.sem-dado { color: var(--texto-suave); }
+
+/* ---------- Mensagens ---------- */
+.mensagem-erro {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  color: var(--vinho);
+  background: #fdecec;
+  border-left: 4px solid var(--vermelho);
+}
+.aviso-vazio {
+  padding: 16px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  color: var(--texto-suave);
+}
+
+/* ---------- Formulários ---------- */
+.campo { margin-bottom: 16px; }
+.campo label { display: block; font-weight: 500; margin-bottom: 4px; }
+.campo input {
+  width: 100%;
+  padding: 9px 10px;
+  font: inherit;
+  border: 1px solid #b7bacb;
+  border-radius: 4px;
+  background: var(--branco);
+}
+.campo small { display: block; margin-top: 4px; color: var(--texto-suave); font-size: 0.82rem; }
+
+/* ---------- Modal ---------- */
+dialog {
+  width: min(460px, 92vw);
+  padding: 0;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+}
+dialog::backdrop { background: rgba(3, 7, 30, 0.6); }
+.modal-form { padding: 24px; }
+.modal-botoes { display: flex; justify-content: flex-end; gap: 8px; }
+
+/* ---------- Login ---------- */
+.pagina-login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--fundo-escuro);
+}
+.login-caixa {
+  width: min(380px, 92vw);
+  padding: 32px;
+  background: var(--branco);
+  border-top: 4px solid var(--vermelho);
+  border-radius: 4px;
+}
+.login-titulo { margin-bottom: 4px; font-size: 2rem; }
+.login-subtitulo { margin: 0 0 24px; color: var(--texto-suave); font-family: "Khula", "Rubik", Arial, sans-serif; }
+
+/* ---------- Detalhes da ata ---------- */
+.ata-info { display: flex; gap: 32px; flex-wrap: wrap; margin: 0 0 20px; }
+.ata-info dt { font-family: "Khula", "Rubik", Arial, sans-serif; font-size: 0.85rem; color: var(--texto-suave); }
+.ata-info dd { margin: 0; font-weight: 500; }
+
+.somente-impressao { display: none; }
+
+/* ---------- Telas menores ---------- */
+@media (max-width: 700px) {
+  .topo { gap: 8px 16px; padding: 0 12px; }
+  .menu { order: 3; width: 100%; }
+  .conteudo { padding: 20px 12px 40px; }
+  th, td { padding: 8px 10px; }
+}
+
+/* ---------- Impressão / Salvar como PDF ---------- */
+@media print {
+  @page { size: A4; margin: 15mm; }
+
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .no-print { display: none !important; }
+  .somente-impressao { display: block; }
+  .conteudo { max-width: none; padding: 0; }
+
+  .identificacao-impressao {
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #000;
+    font-size: 10.5pt;
+  }
+
+  h1 { font-size: 16pt; color: #000; margin-bottom: 8px; }
+  .ata-info { gap: 28px; margin-bottom: 14px; }
+  .ata-info dt { color: #000; }
+
+  .tabela-rolagem { overflow: visible; border: none; background: none; }
+  table { border: 1px solid #000; }
+  th {
+    background: #e6e6e6 !important;
+    color: #000 !important;
+    border: 1px solid #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  td { border: 1px solid #555; padding: 6px 10px; }
+  thead { display: table-header-group; }
+  tr { page-break-inside: avoid; }
+  tbody tr:hover { background: none; }
+
+  .selo-pendente {
+    background: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 0 6px;
+  }
+}

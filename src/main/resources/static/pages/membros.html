@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membros - PontoLiga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Khula:wght@400;600&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topo no-print">
+    <div class="topo-marca">
+      <span class="marca-nome">PontoLiga</span>
+      <span class="marca-sub">Liga Calabotics</span>
+    </div>
+    <nav class="menu">
+      <a href="/pages/atas.html">Atas</a>
+      <a href="/pages/membros.html" class="ativo">Membros</a>
+    </nav>
+    <div class="topo-usuario">
+      <span id="usuario-logado">ADMIN</span>
+      <button type="button" id="btn-sair" class="btn btn-sobre-escuro">Sair</button>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <div class="ata-titulo-linha">
+      <h1>Membros</h1>
+      <button type="button" id="btn-novo" class="btn btn-primario">Cadastrar membro</button>
+    </div>
+
+    <p id="erro" class="mensagem-erro" role="alert" hidden></p>
+    <p id="aviso" class="aviso-vazio" hidden>Nenhum membro cadastrado. Use o botão "Cadastrar membro" para começar.</p>
+
+    <div class="tabela-rolagem">
+      <table id="tabela-membros" hidden>
+        <thead>
+          <tr>
+            <th>Nome completo</th>
+            <th>Matrícula</th>
+            <th>Tag RFID</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-membros"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <dialog id="modal-membro">
+    <form id="form-membro" class="modal-form" novalidate>
+      <h2 id="modal-titulo">Cadastrar membro</h2>
+
+      <div class="campo">
+        <label for="nomeCompleto">Nome completo</label>
+        <input type="text" id="nomeCompleto" name="nomeCompleto" maxlength="150" required>
+      </div>
+      <div class="campo">
+        <label for="matricula">Matrícula</label>
+        <input type="text" id="matricula" name="matricula" maxlength="30" required>
+      </div>
+      <div class="campo">
+        <label for="uidTag">UID da tag RFID</label>
+        <input type="text" id="uidTag" name="uidTag" maxlength="20" autocomplete="off" required>
+        <small>De 4 a 20 caracteres, somente 0-9 e A-F, sem espaços. Exemplo: 04A1B2C3D4</small>
+      </div>
+
+      <p id="erro-form" class="mensagem-erro" role="alert" hidden></p>
+
+      <div class="modal-botoes">
+        <button type="button" id="btn-cancelar" class="btn btn-claro">Cancelar</button>
+        <button type="submit" class="btn btn-primario">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/membros.js"></script>
+</body>
+</html>
