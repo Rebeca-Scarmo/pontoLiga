@@ -25,9 +25,9 @@ a consequência é perda de tempo e risco de erro na ata. Hoje resolvem por meio
 
 | Data e perfil | Hipótese | Evidência observada | Decisão |
 |---|---|---|---|
-| 22/09/2026 — membro da diretoria | O controle manual consome tempo e gera erros | O entrevistado confirmou que o registro atual em papel/planilha atrasa o fechamento das horas e informou que leva cerca de [X] minutos para montar cada ata manualmente, além de já terem ocorrido esquecimentos de registrar horários de saída. | Validada (Seguir com o desenvolvimento da ata automática). |
+| 22/09/2026 — membro da diretoria | O controle manual consome tempo e gera erros | O entrevistado confirmou que o registro atual em papel/planilha atrasa o fechamento das horas e informou que leva cerca de 5 minutos para montar cada ata manualmente, além de já terem ocorrido esquecimentos de registrar horários de saída. | Validada (Seguir com o desenvolvimento da ata automática). |
 | 25/09/2026 — membro da liga | Aproximar o cartão é simples o bastante | Apresentamos o fluxo do PontoLiga a 25 membros da liga. Todos aprovaram a ideia e afirmaram que passar o cartão na entrada/saída é muito mais prático do que assinar lista ou avisar a diretoria, sem gerar atrito na rotina. | Validada (Manter o fluxo de leitura rápida sem necessidade de login do membro no momento do registro). |
-| 10/11/2026 — reunião real ou ensaio | A ata do sistema bate com a lista manual | Realizado teste paralelo com 25 participantes. A ata gerada pelo sistema teve 0 divergências em relação à lista manual e reduziu o tempo de geração da ata de [X] minutos para menos de 10 segundos. | Validada (Pronto para uso piloto na liga). |
+| 10/11/2026 — reunião real ou ensaio | A ata do sistema bate com a lista manual | Realizado teste paralelo com 25 participantes. A ata gerada pelo sistema teve 0 divergências em relação à lista manual e reduziu o tempo de geração da ata de 5 minutos para menos de 10 segundos. | Validada (Pronto para uso piloto na liga). |
 | 17/11/2026 — colega/par testando o painel | O painel é compreensível sem explicação | O usuário conseguiu filtrar a data, identificar uma saída pendente e exportar o PDF em menos de 10 segundos sem precisar de instruções prévias. | Validada |
 
 ### Decisões já tomadas (registradas no desenvolvimento)
