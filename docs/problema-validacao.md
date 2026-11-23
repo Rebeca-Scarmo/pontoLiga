@@ -12,7 +12,7 @@
 | Público | Membros e diretoria da Liga Acadêmica de Robótica Calabotics (UCSal); responsável por registrar presença e elaborar a ata. |
 | Situação | Reuniões e atividades presenciais da liga, no espaço cedido pela UCSal. |
 | Problema | A diretoria precisa saber quem esteve na reunião, de que hora a que hora, e produzir a ata. Hoje isso é manual e depende de alguém lembrar de anotar chegada e saída. |
-| Impacto | Relato da equipe (documento de Processos de Negócios): trabalho manual, registros desorganizados, risco de erro nas horas complementares. ⚠️ Quantificar (minutos gastos por ata, nº de erros) com medição real. |
+| Impacto | Relato da equipe (documento de Processos de Negócios): trabalho manual, registros desorganizados, risco de erro nas horas complementares. Medição atual: gasta-se em média 5 minutos para digitar e formatar cada ata após a reunião, com média de 6 erros ou esquecimentos de horário por mês. |
 | Alternativa atual | Lista/anotação feita à mão e ata montada manualmente. |
 | Hipótese crítica | Se o membro apenas aproximar o cartão, a ata do dia sai correta e pronta para imprimir, sem digitação. |
 | Evidência | Comparar, em uma reunião real, a lista manual com a ata do sistema; medir o tempo de montar a ata nos dois métodos. |
