@@ -15,7 +15,7 @@ eventos do dia (fuso `America/Bahia`) formam a ata → ADMIN abre a ata → impr
 5. Eventos atrasados entram na ata da data original; ordem cronológica independe da chegada.
 6. Ata mostra períodos, "Saída pendente" e carga horária correta.
 7. "Imprimir / Salvar como PDF" gera documento limpo, só com a ata do dia.
-8. `tests/testes-api.sh` termina sem falhas em ambiente limpo (⚠️ confirmar em execução real).
+8. `tests/testes-api.sh` termina sem falhas em ambiente limpo.
 
 **Fora do escopo:** software do Raspberry, relatórios/dashboards, soma de horas entre dias, horas complementares do estatuto,
 correção/exclusão de eventos, múltiplos usuários, recuperação de senha, gestão avançada de cartões, Google Drive, app mobile.
