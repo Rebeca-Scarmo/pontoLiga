@@ -1,7 +1,6 @@
 # Conteúdos de POOA aplicados (para o bônus)
 
-Lista do que **existe de fato** no código, com onde ver e por que foi usado. Itens não listados aqui não foram aplicados.
-A equipe deve ser capaz de explicar cada um.
+Lista do que **existe de fato** no código, com onde ver e por que foi usado.
 
 | Conteúdo | Onde está | Justificativa |
 |---|---|---|
@@ -15,4 +14,4 @@ A equipe deve ser capaz de explicar cada um.
 | **Exceções próprias + tratamento global** | `exception/*`, `TratadorGlobalDeErros` | Respostas de erro padronizadas sem vazar detalhes |
 | **Transações e concorrência** | `EventoPresencaService` grava cada evento em transação própria e trata `DataIntegrityViolationException` | Deduplicação segura mesmo com requisições simultâneas |
 
-**Não aplicados (não afirmar no pitch):** Strategy/Builder/Observer, reflexão própria, Virtual Threads, Servlets puros.
+
