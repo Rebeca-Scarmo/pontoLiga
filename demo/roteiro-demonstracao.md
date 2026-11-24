@@ -18,6 +18,12 @@ Atenção: o evento ao vivo (passo 2) não faz parte do script. Se ele já foi e
 
 Observação: o equipamento é simulado por `curl` (ver limitações no README).
 
+## Se perguntarem por outras atas
+
+- **22/11:** Ana (2h00min, 1h30min e 14:00 "Saída pendente"), Bruno (2h30min e 23:30 pendente) e Carla (5s e 23:59:30 pendente). Só esses três membros; é a base que já existia.
+- **23/11:** Bruno e Carla só com saída (entrada "Não registrada"), porque a entrada deles está na ata de 22/11 (virada de data).
+- **21/11:** Ana 40min, Carla 1h30min, Rebeca 2h30min e Beres com "Saída pendente".
+
 ## Contingência (não substitui o MVP)
 
 - Gravar uma tela de 1–2 min seguindo este roteiro e salvar em `demo/demonstracao.mp4`.
