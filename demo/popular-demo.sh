@@ -3,6 +3,8 @@
 # Simula o equipamento (Raspberry Pi) enviando eventos por HTTP.
 #
 # Contém (1) os dados que já existem hoje no sistema e (2) dados ACRESCENTADOS para a demonstração.
+# A ata de 22/11 (Ana, Bruno e Carla) fica exatamente como já existe hoje: os dados acrescentados
+# só mexem nas atas de 20/11 e 21/11.
 # Pode ser executado quantas vezes quiser: membros repetidos retornam 409 e eventos repetidos retornam DUPLICADO,
 # então nada é duplicado, e funciona tanto num banco que já tem os dados quanto num banco novo.
 #
@@ -55,6 +57,7 @@ enviar() {  # descrição json
 }
 
 echo "-- Dados que já existem hoje (22/11, 23/11 e 20/11)"
+# 22/11: Ana, Bruno e Carla. Esta ata NÃO recebe nenhum evento extra da demonstração.
 enviar "Base 22/11/2026 (11 eventos)" '[
  {"eventId":"t-0001","uid":"04A1B2C3D4","timestamp":"2026-11-22T08:00:00-03:00","eventType":"ENTRY"},
  {"eventId":"t-0002","uid":"04A1B2C3D4","timestamp":"2026-11-22T10:00:00-03:00","eventType":"EXIT"},
@@ -77,7 +80,7 @@ enviar "Base 20/11/2026 (2 eventos, Bruno)" '[
  {"eventId":"t-0202","uid":"04B2C3D4E5","timestamp":"2026-11-20T19:30:00-03:00","eventType":"EXIT"}
 ]'
 
-echo "-- Acrescentados para a demonstração"
+echo "-- Acrescentados para a demonstração (só 20/11 e 21/11)"
 # 20/11: enviado fora de ordem de propósito (a ata ordena pelo horário da leitura).
 # A Carla fica com ENTRADA SEM SAÍDA: a saída será enviada ao vivo durante a demonstração.
 enviar "Demo 20/11/2026 (11 eventos)" '[
@@ -103,17 +106,10 @@ enviar "Demo 21/11/2026 (7 eventos)" '[
  {"eventId":"demo-1121-r-02","uid":"04A1B2A5F7","timestamp":"2026-11-21T11:00:00-03:00","eventType":"EXIT"},
  {"eventId":"demo-1121-be-01","uid":"04A1B2A5A5","timestamp":"2026-11-21T16:00:00-03:00","eventType":"ENTRY"}
 ]'
-# 22/11: Beres e Rebeca entram na ata que já existe
-enviar "Demo 22/11/2026 (4 eventos)" '[
- {"eventId":"demo-1122-be-01","uid":"04A1B2A5A5","timestamp":"2026-11-22T08:20:00-03:00","eventType":"ENTRY"},
- {"eventId":"demo-1122-be-02","uid":"04A1B2A5A5","timestamp":"2026-11-22T09:50:00-03:00","eventType":"EXIT"},
- {"eventId":"demo-1122-r-01","uid":"04A1B2A5F7","timestamp":"2026-11-22T10:00:00-03:00","eventType":"ENTRY"},
- {"eventId":"demo-1122-r-02","uid":"04A1B2A5F7","timestamp":"2026-11-22T12:30:00-03:00","eventType":"EXIT"}
-]'
 
 echo
 echo "Pronto. Abra $BASE, entre como ADMIN e confira as atas."
-echo "Primeira execução em banco novo: 15 eventos da base + 22 da demonstração = 37 criados."
+echo "Primeira execução em banco novo: 15 eventos da base + 18 da demonstração = 33 criados."
 echo "Execuções seguintes: tudo DUPLICADO (nada muda)."
 echo
 echo "Estado esperado ANTES da demonstração ao vivo:"
@@ -121,6 +117,6 @@ echo "  Atas: 23/11, 22/11, 21/11 e 20/11/2026."
 echo "  20/11: Ana 3 períodos (2h00min, 1h30min, 1h00min); Beres 3h30min; Bruno 1h30min;"
 echo "         Carla 09:00 com 'Saída pendente'; Rebeca 45min."
 echo "  21/11: Ana 40min; Carla 1h30min; Rebeca 2h30min; Beres com 'Saída pendente'."
-echo "  22/11: Ana 2h00min, 1h30min e 14:00 'Saída pendente'; Beres 1h30min; Bruno 2h30min e 23:30 pendente;"
-echo "         Carla 5s e 23:59:30 pendente; Rebeca 2h30min."
+echo "  22/11: inalterada, igual ao que já existe hoje: Ana 2h00min, 1h30min e 14:00 'Saída pendente';"
+echo "         Bruno 2h30min e 23:30 pendente; Carla 5s e 23:59:30 pendente."
 echo "  23/11: Bruno e Carla só com saída (entrada 'Não registrada'; a entrada está na ata de 22/11)."
